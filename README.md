@@ -32,12 +32,19 @@ Buscar Filmes na API do OMDb: Busque filmes usando a API do OMDb e adicione-os a
 
 Como Rodar o Projeto
 Clone o Repositório: git clone https://github.com/bernardoaquino28/wsBackend-Fabrica25.1
-Crie e Ative um Ambiente Virtual: python -m venv myenv
-myenv\Scripts\activate  # No Windows
-# ou source myenv/bin/activate # No Linux/Mac
+
+Crie e Ative um Ambiente Virtual: python -m venv myenv e depois myenv\Scripts\activate  # No Windows
+
+
 Se necessário, altere a política de execução no PowerShell com: powershell Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 Instale as Dependências: pip install -r requirements.txt
+
 Realize as Migrações do Banco de Dados: Python manage.py migrate
+
 Inicie o Servidor de Desenvolvimento: python manage.py runserver
+
+
 Acesse a Aplicação:
+
 Acesse http://localhost:8000/filmes/ para usar a aplicação.
