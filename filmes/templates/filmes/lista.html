@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Filmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        .acoes {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        
+        .acoes a {
+            margin-right: 10px;
+        }
+        
+        .link-buscar {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .link-buscar a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        
+        .link-buscar a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Filmes</h1>
+        <div class="links">
+            <a href="{% url 'novo_filme' %}">Novo Filme</a>
+        </div>
+        <ul>
+            {% for filme in filmes %}
+                <li>
+                    {{ filme.nome }} ({{ filme.categoria }})
+                    <span class="acoes">
+                        <a href="{% url 'editar_filme' filme.pk %}">Editar</a>
+                        <a href="{% url 'excluir_filme' filme.pk %}">Excluir</a>
+                    </span>
+                </li>
+            {% empty %}
+                <li>Nenhum filme cadastrado.</li>
+            {% endfor %}
+        </ul>
+        <div class="link-buscar">
+            <a href="{% url 'buscar_filme_omdb' %}">Buscar Filmes na API</a>
+        </div>
+    </div>
+</body>
+</html>
