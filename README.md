@@ -30,19 +30,19 @@ Excluir Filme: Remova um filme do banco de dados.
 
 Buscar Filmes na API do OMDb: Busque filmes usando a API do OMDb e adicione-os ao banco de dados.
 
-Como Rodar o Projeto
-Clone o Repositório: git clone https://github.com/bernardoaquino28/wsBackend-Fabrica25.1
+Como Rodar o Projeto:
 
-Crie e Ative um Ambiente Virtual: python -m venv myenv e depois myenv\Scripts\activate  # No Windows
+1-Clone o Repositório: git clone https://github.com/bernardoaquino28/wsBackend-Fabrica25.1
 
+2-Crie e Ative um Ambiente Virtual: python -m venv myenv e depois myenv\Scripts\activate  # No Windows
 
-Se necessário, altere a política de execução no PowerShell com: powershell Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+3-Se necessário, altere a política de execução no PowerShell com: powershell Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-Instale as Dependências: pip install -r requirements.txt
+4-Instale as Dependências: pip install -r requirements.txt
 
-Realize as Migrações do Banco de Dados: Python manage.py migrate
+5-Realize as Migrações do Banco de Dados: Python manage.py migrate
 
-Inicie o Servidor de Desenvolvimento: python manage.py runserver
+6-Inicie o Servidor de Desenvolvimento: python manage.py runserver
 
 
 Acesse a Aplicação:
